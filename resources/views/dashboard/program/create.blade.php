@@ -3,7 +3,7 @@
 @include('layouts/navigation')
 @section('contenido')
 <div class="container mt-5">
-    <h1 class="mb-4">Create Program</h1>
+    <h1 class="mb-4">Crear un Programa</h1>
     @if($errors->any())
         <div class="alert alert-danger">
             <ul>

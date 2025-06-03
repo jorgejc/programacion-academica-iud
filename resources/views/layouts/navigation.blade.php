@@ -59,6 +59,9 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            <x-dropdown-link :href="url('dashboard/curriculum_semester')" :active="request()->routeIs('curriculum_semester.*')">
+                                 {{ __('Curriculum por Semestre') }}
+                            </x-dropdown-link>
                             <x-dropdown-link :href="url('dashboard/subject')" :active="request()->routeIs('subject.*')">
                                 {{ __('Asignaturas') }}
                             </x-dropdown-link>

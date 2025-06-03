@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\AcademicSemester;
 use App\Models\Area;
 use App\Models\CurriculumSemester;
 use App\Models\Subject;
@@ -24,12 +24,19 @@ class SubjectController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        $areas = Area::all();
-        $curriculumsSemester = CurriculumSemester::all();
-        $programs = Program::all();
-        return view('dashboard.subject.create',['areas'=>$areas, 'curriculumsSemester'=>$curriculumsSemester, 'programs'=>$programs]);
-    }
+{
+    $areas = Area::all();
+    $curriculumsSemester = CurriculumSemester::all();
+    $programs = Program::all();
+    $academicSemesters = AcademicSemester::all(); // 🔥 Esta línea es clave
+
+    return view('dashboard.subject.create', [
+        'areas' => $areas,
+        'curriculumsSemester' => $curriculumsSemester,
+        'programs' => $programs,
+        'academicSemesters' => $academicSemesters // 🔥 Pásalo a la vista
+    ]);
+}
 
     /**
      * Store a newly created resource in storage.

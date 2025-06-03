@@ -50,11 +50,17 @@
             </div>
 
             <div class="mb-3">
-                <label for="id_curriculum_semester" class="form-label">Número de semestre</label>
-                <select name="id_curriculum_semester" id="id_curriculum_semester" class="form-control" required>
-                    <option value="">Seleccione un semestre</option>
-                </select>
-            </div>
+    <label for="id_curriculum_semester" class="form-label">Número de semestre</label>
+    <select name="id_curriculum_semester" id="id_curriculum_semester" class="form-control" required>
+        <option value="">Seleccione un semestre</option>
+        @foreach ($curriculumsSemester as $cs)
+            <option value="{{ $cs->id }}">
+                {{ $cs->semester_number }} - {{ $cs->curriculum->name ?? 'Sin nombre de currículo' }}
+            </option>
+        @endforeach
+    </select>
+</div>
+
 
             <div class="mb-3">
                 <label for="id_area" class="form-label">Área</label>

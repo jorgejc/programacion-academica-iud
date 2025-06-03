@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             faculties_tableSeeder::class,
-            BlocksTableSeeder::class, // Seeder para los bloques
+            
         ]);
     }
 }

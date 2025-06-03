@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('dashboard/blocks', BlockController::class);
     Route::resource('dashboard/academic_semester', AcademicSemesterController::class);
     Route::resource('dashboard/curriculum', CurriculumController::class);
-    Route::resource('dashboard/curriculum_semesters', CurriculumSemesterController::class);
+    Route::resource('dashboard/curriculum_semester', CurriculumSemesterController::class);
     Route::resource('dashboard/subject', SubjectController::class);
     Route::resource('dashboard/semesterSubject', SemesterSubjectController::class);
     Route::resource('dashboard/projection', ProjectionController::class);
